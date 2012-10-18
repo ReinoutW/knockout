@@ -73,6 +73,10 @@ ko.bindingHandlers['options'] = {
                 var optionText = applyToObject(arrayEntry, allBindings['optionsText'], optionValue);
                 ko.utils.setTextContent(option, optionText);
 
+                // Apply a class to the option element
+                var optionClass = applyToObject(arrayEntry, allBindings['optionsClass'], '');
+                option.setAttribute('class', optionClass);
+
                 element.appendChild(option);
             }
 
